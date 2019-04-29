@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="../static/style.css" type="text/css">
+
+<form name ="login" action="/login?{{ orig_url }}" method="post" onsubmit="return lValider()" oncopy="return false" onpaste="return false" oncut="return false" onselectstart="return false">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="nom d'utilisateur" name="lusername">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="mot de passe" name="lpassword">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+      En vous connectant à ce réseau, vous acceptez les <a href="../CGU.pdf">Conditions Générales d'Utilisation</a>
+                <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block" >
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+<form name="register" action="/register?{{ orig_url }}" method="post" onsubmit="return rValider()" oncopy="return false" onpaste="return false" oncut="return false" onselectstart="return false">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Inscription</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="nom d'utilisateur" name="rusername">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="email" class="login-field" value="" placeholder="email" name="email">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="mot de passe" name="rpassword">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="Confirmer mot de passe" name="confirmRpassword">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				En vous inscrivant à ce service, vous acceptez les <a href="../CGU.pdf">Conditions Générales d'Utilisation</a>
+									<input type="submit" value="Je m'inscris et Log in" class="btn btn-primary btn-large btn-block" >
+</form>
+
+
+
+<script type="text/javascript">
+function lValider() {
+    if (document.forms["login"]["lusername"].value != "" && document.forms["login"]["lpassword"].value != "") {
+        return true;
+			}
+		else {
+			alert("Veuillez saisir votre identifiant et votre mot de passe");
+			return false;
+		}
+}
+
+function rValider()
+{
+    if (document.forms["register"]["rusername"].value != "" && document.forms["register"]["email"].value != "" && document.forms["register"]["rpassword"].value != "" && document.forms["register"]["confirmRpassword"].value != "")
+		 {
+			if (document.forms["register"]["rpassword"].value == document.forms["register"]["confirmRpassword"].value)
+			 {
+        return true;
+			 }
+			else
+			 {
+				alert("Les mots de passe ne correspondent pas");
+				return false;
+			 }
+		 }
+		else
+		{
+			alert("Veuillez saisir toutes les informations");
+			return false;
+		}
+}
+</script>
