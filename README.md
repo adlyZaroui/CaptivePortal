@@ -10,7 +10,7 @@ You have to change the IP adress in the main script server.py
 
 All web requests from the users are redirected to the local machine and all
 the traffic to the outside is rejected as long as the user has not logged in.
-You can create an account, and one the user has logged in, his traffic is
+You can create an account, and once the user has logged in, his traffic is
 accepted.
 
 Correctly detected by OS x, Windows, Ubuntu, iOS, Android
