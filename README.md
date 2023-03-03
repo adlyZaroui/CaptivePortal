@@ -3,8 +3,8 @@ Simple captive portal using Python3, Flask and Netfilter
 
 First, install all the dependencies by executing the setup.sh file.
 
-Then, you have to connect your computer to an RJ45 connexion (or all other kind
-of connexion except Wi-Fi) and execute the start.sh file (as root)
+Then, you have to connect your computer to an RJ45 connecter (or all other kind
+of wired connexion) and execute as root the start.sh file
 
 You have to change the IP adress in the main script server.py
 
@@ -15,7 +15,6 @@ accepted.
 
 Correctly detected by OS x, Windows, Ubuntu, iOS, Android
 
-Available at dassko5@hotmail.fr for bugs.
+If any help needed, please feel free to contact me at dassko5@hotmail.fr
 
-This programm is a fork of the AloysAugustin programm
-(https://github.com/AloysAugustin/captive_portal)
+This programm is a fork of the AloysAugustin programm (https://github.com/AloysAugustin/captive_portal)
